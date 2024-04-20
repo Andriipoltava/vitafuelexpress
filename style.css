@@ -1,0 +1,290 @@
+/*
+Theme Name: Flatsome Child
+Description: This is a child theme for Flatsome Theme
+Author: UX Themes
+Template: flatsome
+Version: 3.0.2
+*/
+
+/*************** ADD CUSTOM CSS HERE.   ***************/
+
+
+@media only screen and (max-width: 48em) {
+    /*************** ADD MOBILE ONLY CSS HERE  ***************/
+}
+
+body {
+    --color-back: #343434;
+    --type: #00a3ff;
+    --sale: #ff5c00;
+    --color-gray: #dbdbdb;
+    --color-green: #56c561;
+    --color-white: #fff;
+    --color-cherry: #c71349;
+    --font-family: "Outfit", sans-serif;
+    --second-family: "Avenir Next", sans-serif;
+    --third-family: "Poppins", sans-serif;
+    --font3: "Korto", sans-serif;
+    --font4: "Raleway", sans-serif;
+    --font5: "Avenir", sans-serif;
+}
+
+.add-cart__wrap {
+    order: 3;
+}
+
+.product-default {
+    border: 1px solid var(--color-gray);
+    border-radius: 18px;
+}
+
+.product-default .title-wrapper {
+    border-bottom: 1px solid var(--color-gray);
+    padding: 18px 18px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+    gap: 12px;
+}
+
+
+.product-default .product-top {
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 18px;
+}
+
+.product-default
+.product-top-status
+svg {
+    margin-right: 5px;
+}
+
+.product-default
+.product-top-status {
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 12px;
+    color: var(--color-back);
+}
+
+.product-small.box .product-title {
+    margin: 0;
+}
+
+.product-default
+.product-small.box .product-title a {
+    text-align: start;
+    font-family: var(--font-family);
+    font-weight: 600;
+    font-size: 12px;
+    color: #000;
+}
+
+.product-default
+.price-wrapper {
+    display: flex;
+    gap: 12px;
+    padding: 12px 18px 0;
+    justify-content: space-between;
+    align-items: end;
+}
+
+.product-default .price-total del {
+    text-decoration: none;
+}
+
+.product-default .price-total del
+.woocommerce-Price-amount.amount {
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 12px;
+    text-decoration: line-through;
+    color: rgba(0, 0, 0, 0.4);
+}
+
+.product-default
+.price-total {
+    font-family: var(--font-family);
+    font-weight: 600;
+    font-size: 24px;
+    color: #000;
+    text-decoration: none;
+}
+
+.woocs_price_code {
+    display: flex;
+    flex-direction: column;
+}
+
+.product-default ins,
+.product-default .woocs_price_code {
+    line-height: 1;
+}
+
+.product-default .save {
+    font-family: var(--font-family);
+    font-weight: 600;
+    font-size: 12px;
+    text-align: right;
+    color: #6ed10b;
+    margin-bottom: 2px;
+    display: block;
+}
+
+.product-default .quantity {
+    border: 1px solid var(--color-gray);
+    border-radius: 8px;
+    padding: 2px;
+    width: 36px;
+    height: 36px;
+    margin-right: 0 !important;
+    color: #000;
+    background: transparent;
+}
+
+.product-default
+.quantity input[type=number] {
+    font-family: var(--third-family);
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 100%;
+    background: transparent;
+}
+
+.product-default .cart {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 6px;
+    padding: 12px 18px;
+    margin: 0;
+}
+
+.product-default
+.single_add_to_cart_button.button {
+    background: var(--color-cherry) !important;
+    border-radius: 8px !important;
+    padding: 12px 17px;
+    font-family: var(--font-family);
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 100%;
+    text-transform: uppercase;
+    color: var(--color-white);
+    margin: 0 !important;
+    width: 100%;
+    max-width: 156px;
+}
+
+.product-default
+.product-small.box .box-text {
+    margin-bottom: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.product-default .image-fade_in_back {
+    margin: 0 auto;
+    width: 80%;
+    position: relative;
+}
+
+.product-default
+.quantity.buttons_added .button {
+    display: none;
+}
+
+.product-default .badge-container {
+    display: none;
+}
+
+.product-default .excerpt-wrapper {
+    font-family: var(--font-family);
+    font-weight: 300;
+    font-size: 12px;
+    color: var(--color-back);
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 3; /* number of lines to show */
+    line-clamp: 3;
+    -webkit-box-orient: vertical;
+}
+
+.product-default
+.product-small.box .name.product-title.woocommerce-loop-product__title {
+    /*height: auto!important;*/
+}
+
+.product-default
+.yith-wcwl-wishlistexistsbrowse {
+
+}
+
+.product-default
+.icon-heart:before {
+
+}
+
+.product-default
+.wishlist-icon {
+    /*position: absolute;*/
+    /*top: -20px;*/
+}
+
+.button.icon.circle {
+    margin: 0 !important;
+    padding: 0 !important;
+    background: transparent !important;
+    border: none !important;
+    min-width: 0 !important;
+}
+
+.product-default .icon-heart:before {
+    width: 22px;
+    height: 20px;
+    position: relative;
+    display: block;
+    content: '';
+    margin-top: -8px;
+    background-image: url("data:image/svg+xml,%3Csvg width='22' height='20' viewBox='0 0 22 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10.2827 1.45332C10.5131 0.986377 10.6284 0.752908 10.7848 0.678314C10.9209 0.613414 11.0791 0.613414 11.2152 0.678314C11.3717 0.752908 11.4869 0.986377 11.7174 1.45332L13.9041 5.88328C13.9721 6.02113 14.0061 6.09006 14.0558 6.14358C14.0999 6.19096 14.1527 6.22935 14.2113 6.25662C14.2776 6.28742 14.3536 6.29854 14.5057 6.32077L19.397 7.03571C19.9121 7.11099 20.1696 7.14863 20.2888 7.27444C20.3925 7.38389 20.4412 7.5343 20.4215 7.68377C20.3988 7.85558 20.2124 8.03718 19.8395 8.40038L16.3014 11.8464C16.1912 11.9538 16.136 12.0076 16.1004 12.0715C16.0689 12.128 16.0487 12.1902 16.0409 12.2545C16.0321 12.3271 16.0451 12.403 16.0711 12.5547L16.906 17.4221C16.994 17.9355 17.038 18.1922 16.9553 18.3445C16.8833 18.477 16.7554 18.57 16.6071 18.5975C16.4366 18.6291 16.2061 18.5078 15.7451 18.2654L11.3724 15.9658C11.2361 15.8942 11.168 15.8584 11.0962 15.8443C11.0327 15.8318 10.9673 15.8318 10.9038 15.8443C10.832 15.8584 10.7639 15.8942 10.6277 15.9658L6.25492 18.2654C5.79392 18.5078 5.56341 18.6291 5.39297 18.5975C5.24468 18.57 5.11672 18.477 5.04474 18.3445C4.962 18.1922 5.00603 17.9355 5.09407 17.4221L5.92889 12.5547C5.95491 12.403 5.96793 12.3271 5.95912 12.2545C5.95132 12.1902 5.93111 12.128 5.89961 12.0715C5.86402 12.0076 5.80888 11.9538 5.69859 11.8464L2.16056 8.40038C1.78766 8.03718 1.60121 7.85558 1.57853 7.68377C1.55879 7.5343 1.60755 7.38389 1.71125 7.27444C1.83044 7.14863 2.08797 7.11099 2.60304 7.03571L7.49431 6.32077C7.64642 6.29854 7.72248 6.28742 7.78872 6.25662C7.84736 6.22935 7.90016 6.19096 7.94419 6.14358C7.99391 6.09006 8.02793 6.02113 8.09597 5.88328L10.2827 1.45332Z' stroke='%23343434' stroke-width='1.2' stroke-linecap='round' stroke-linejoin='round' /%3E%3C/svg%3E");
+}
+
+.product-default .wishlist-button:hover .icon-heart:before {
+    background-image: url("data:image/svg+xml,%3Csvg width='22' height='20' viewBox='0 0 22 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10.2827 1.45332C10.5131 0.986377 10.6284 0.752908 10.7848 0.678314C10.9209 0.613414 11.0791 0.613414 11.2152 0.678314C11.3717 0.752908 11.4869 0.986377 11.7174 1.45332L13.9041 5.88328C13.9721 6.02113 14.0061 6.09006 14.0558 6.14358C14.0999 6.19096 14.1527 6.22935 14.2113 6.25662C14.2776 6.28742 14.3536 6.29854 14.5057 6.32077L19.397 7.03571C19.9121 7.11099 20.1696 7.14863 20.2888 7.27444C20.3925 7.38389 20.4412 7.5343 20.4215 7.68377C20.3988 7.85558 20.2124 8.03718 19.8395 8.40038L16.3014 11.8464C16.1912 11.9538 16.136 12.0076 16.1004 12.0715C16.0689 12.128 16.0487 12.1902 16.0409 12.2545C16.0321 12.3271 16.0451 12.403 16.0711 12.5547L16.906 17.4221C16.994 17.9355 17.038 18.1922 16.9553 18.3445C16.8833 18.477 16.7554 18.57 16.6071 18.5975C16.4366 18.6291 16.2061 18.5078 15.7451 18.2654L11.3724 15.9658C11.2361 15.8942 11.168 15.8584 11.0962 15.8443C11.0327 15.8318 10.9673 15.8318 10.9038 15.8443C10.832 15.8584 10.7639 15.8942 10.6277 15.9658L6.25492 18.2654C5.79392 18.5078 5.56341 18.6291 5.39297 18.5975C5.24468 18.57 5.11672 18.477 5.04474 18.3445C4.962 18.1922 5.00603 17.9355 5.09407 17.4221L5.92889 12.5547C5.95491 12.403 5.96793 12.3271 5.95912 12.2545C5.95132 12.1902 5.93111 12.128 5.89961 12.0715C5.86402 12.0076 5.80888 11.9538 5.69859 11.8464L2.16056 8.40038C1.78766 8.03718 1.60121 7.85558 1.57853 7.68377C1.55879 7.5343 1.60755 7.38389 1.71125 7.27444C1.83044 7.14863 2.08797 7.11099 2.60304 7.03571L7.49431 6.32077C7.64642 6.29854 7.72248 6.28742 7.78872 6.25662C7.84736 6.22935 7.90016 6.19096 7.94419 6.14358C7.99391 6.09006 8.02793 6.02113 8.09597 5.88328L10.2827 1.45332Z' stroke='%23C71349' stroke-width='1.2' stroke-linecap='round' stroke-linejoin='round' /%3E%3C/svg%3E");
+}
+
+.product-default .wishlist-added .icon-heart:before {
+    background-image: url("data:image/svg+xml,%3Csvg width='22' height='20' viewBox='0 0 22 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10.2827 1.45332C10.5131 0.986377 10.6284 0.752908 10.7848 0.678314C10.9209 0.613414 11.0791 0.613414 11.2152 0.678314C11.3717 0.752908 11.4869 0.986377 11.7174 1.45332L13.9041 5.88328C13.9721 6.02113 14.0061 6.09006 14.0558 6.14358C14.0999 6.19096 14.1527 6.22935 14.2113 6.25662C14.2776 6.28742 14.3536 6.29854 14.5057 6.32077L19.397 7.03571C19.9121 7.11099 20.1696 7.14863 20.2888 7.27444C20.3925 7.38389 20.4412 7.5343 20.4215 7.68377C20.3988 7.85558 20.2124 8.03718 19.8395 8.40038L16.3014 11.8464C16.1912 11.9538 16.136 12.0076 16.1004 12.0715C16.0689 12.128 16.0487 12.1902 16.0409 12.2545C16.0321 12.3271 16.0451 12.403 16.0711 12.5547L16.906 17.4221C16.994 17.9355 17.038 18.1922 16.9553 18.3445C16.8833 18.477 16.7554 18.57 16.6071 18.5975C16.4366 18.6291 16.2061 18.5078 15.7451 18.2654L11.3724 15.9658C11.2361 15.8942 11.168 15.8584 11.0962 15.8443C11.0327 15.8318 10.9673 15.8318 10.9038 15.8443C10.832 15.8584 10.7639 15.8942 10.6277 15.9658L6.25492 18.2654C5.79392 18.5078 5.56341 18.6291 5.39297 18.5975C5.24468 18.57 5.11672 18.477 5.04474 18.3445C4.962 18.1922 5.00603 17.9355 5.09407 17.4221L5.92889 12.5547C5.95491 12.403 5.96793 12.3271 5.95912 12.2545C5.95132 12.1902 5.93111 12.128 5.89961 12.0715C5.86402 12.0076 5.80888 11.9538 5.69859 11.8464L2.16056 8.40038C1.78766 8.03718 1.60121 7.85558 1.57853 7.68377C1.55879 7.5343 1.60755 7.38389 1.71125 7.27444C1.83044 7.14863 2.08797 7.11099 2.60304 7.03571L7.49431 6.32077C7.64642 6.29854 7.72248 6.28742 7.78872 6.25662C7.84736 6.22935 7.90016 6.19096 7.94419 6.14358C7.99391 6.09006 8.02793 6.02113 8.09597 5.88328L10.2827 1.45332Z' stroke='%23C71349' stroke-width='1.2' fill='%23C71349' stroke-linecap='round' stroke-linejoin='round' /%3E%3C/svg%3E");
+}
+.product-default .box-image{
+    padding: 0 12px;
+    margin: 0 12px;
+}
+.product-default .wishlist-popup {
+    z-index: 1111;
+}
+
+.product-default .pa_directions-dosage img ,
+.product-default .pa_ingredients img {
+    max-width: 24px;
+    width: 100%;
+}
+
+.product-default .pa_directions-dosage {
+    right: 0;
+}
+.product-default .pa_ingredients {
+    left: 0px;
+}
+.product-default .pa_directions-dosage ,
+.product-default .pa_ingredients {
+
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    position: absolute;
+
+    bottom: 0;
+}
