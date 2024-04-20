@@ -58,6 +58,7 @@ do_action( 'woocommerce_before_mini_cart' ); ?>
 						$cart_item_key
 					);
 					?>
+                    <span class="cart-item-title">
 					<?php if ( empty( $product_permalink ) ) : ?>
 						<?php echo $thumbnail . wp_kses_post( $product_name ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
 					<?php else : ?>
@@ -65,6 +66,7 @@ do_action( 'woocommerce_before_mini_cart' ); ?>
 							<?php echo $thumbnail . wp_kses_post( $product_name ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
 						</a>
 					<?php endif; ?>
+                    </span>
 					<?php echo wc_get_formatted_cart_item_data( $cart_item ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
                     <div class="cart-item-info">
                         <div class="cart-item-price"><?php echo $product_price?></div>
