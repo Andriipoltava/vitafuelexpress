@@ -1,0 +1,50 @@
+
+#wpforms-6077 .wpforms-field-label{
+  margin:0;
+}
+
+#wpforms-6077  .wpforms-submit{
+  border-radius: 33px !important;
+  background-color: var(--color-cherry) !important;
+  width: 90%;
+  padding: 16px 70px !important;
+  color: var(--color-white, #FFF) !important;
+  font-family: var(--font-korto) !important;
+  font-size: 16px !important;
+  font-style: normal !important;
+  font-weight: 700 !important;
+  line-height: normal !important;
+  text-transform: uppercase !important;
+  border: initial;
+  margin: 0;
+  margin-bottom: 20px;
+  height: auto;
+  width: auto;
+}
+
+.checkout_coupon input,
+form.woocommerce-checkout input,
+form.woocommerce-checkout textarea,
+#wpforms-6077 input,
+#wpforms-6077 textarea{
+  color: #000;
+  font-family: var(--font-korto);
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  border-radius: var(--Box-Spacing, 24px);
+  padding: 10px 15px;
+  border: 1px solid rgba(0, 0, 0, 0.20);
+  background: var(--color-white, #FFF);
+  line-height: 20px;
+  height: auto;
+}
+
+
+.wpforms-submit{
+  outline:initial !important;
+}
+
+div.wpforms-container-full input[type=submit]:focus:after, div.wpforms-container-full button[type=submit]:focus:after, div.wpforms-container-full .wpforms-page-button:focus:after{
+  display:none;
+}

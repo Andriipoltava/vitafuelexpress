@@ -1,0 +1,117 @@
+
+
+
+.widget-title.shop-sidebar{
+  color: #000;
+
+  font-variant-numeric: lining-nums proportional-nums;
+  font-family: var(--font-korto);
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 116%;
+}
+
+
+.single-product,
+.single-product #main,
+.single-product #wrapper{
+  background: #F2F2F2 !important;
+  padding-top:0;
+}
+
+.single-product .product-main,
+.single-product  .woocommerce-tabs{
+  max-width:1023px;
+  margin:0 auto;
+}
+
+.single-product .page-title{
+  padding-top:100px;
+  padding-bottom:20px
+}
+
+.single-product .product-title {
+  color: #292929;
+  font-family: Avenir;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: normal;
+}
+
+.woocommerce-Tabs-panel p,
+.woocommerce-Tabs-panel h3{
+  color: #000;
+  font-family: var(--font-korto);
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 170%;
+}
+
+.single-product .product-section-title{
+  color: #000;
+  font-variant-numeric: lining-nums proportional-nums;
+  font-family: var(--font-korto);
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 116%;
+  text-transform:initial;
+}
+
+.single-product .related.related-products-wrapper{
+  padding:100px 0px 100px;
+  border-top:1px solid rgba(0, 0, 0, 0.14);
+  margin-top:100px;
+}
+
+.single-product .tabs li a:before{
+  background-color:var(--color-cherry) !important;
+}
+
+
+
+.single-product .price del span.amount{
+  color: #B8B8B8;
+  font-family: var(--font-korto);
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  text-decoration-line: strikethrough;
+}
+
+.single-product .price ins span.amount{
+  color: var(--color-cherry);
+  font-family: var(--font-korto);
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.zoom-button{
+  display:none !important;
+}
+
+.single-product .product-summary .woocommerce-Price-currencySymbol {
+  display: inline-block;
+  font-size: inherit;
+  vertical-align: initial;
+}
+
+.product-container .single_add_to_cart_button{
+  border-radius: 33px !important;
+  background-color: var(--color-cherry) !important;
+  width: 90%;
+  padding: 16px 20px !important;
+  color: var(--color-white, #FFF) !important;
+  font-family: var(--font-korto) !important;
+  font-size: 16px !important;
+  font-style: normal !important;
+  font-weight: 700 !important;
+  line-height: normal !important;
+  text-transform: uppercase !important;
+  border: initial;
+}

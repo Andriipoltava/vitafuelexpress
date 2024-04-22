@@ -1,0 +1,25 @@
+
+.category-tab-title{
+  margin-top:50px;
+  margin-bottom: 30px;
+}
+
+.category-box-home .col-inner{
+  border-radius:24px;
+  overflow:hidden;
+}
+
+.category-box-home .col-inner .box-text-inner h4{
+  color: var(--color-white, #FFF);
+  font-family: var(--font-korto);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  text-transform: uppercase;
+}
+
+.category-box-home .col-inner .box-text{
+  padding-top:10px;
+  padding-bottom:10px;
+}
