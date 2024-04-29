@@ -33,6 +33,7 @@ $icon_style = get_theme_mod('account_icon_style');
 		</span>
 	<?php }else{
         ?>
+
     <?php
     }?>
   <?php if($icon_style == 'image'){
