@@ -324,11 +324,6 @@ a.button.is-outline > i[class^="icon-"]
 
 
 
-.dgwt-wcas-style-pirx .dgwt-wcas-sf-wrapp input[type=search].dgwt-wcas-search-input::placeholder{
-  color:#fff;
-}
-
-
 
 .page #content,
 .single #content{
@@ -364,7 +359,7 @@ a.button.is-outline > i[class^="icon-"]
 
 .ux-menu-link__link:hover,
 .post-title:hover a,
-.menu-item:hover a{
+.menu-item:hover> a{
   color:#FF5C00 !important;
 }
 
@@ -406,29 +401,6 @@ a.button.is-outline > i[class^="icon-"]
   line-height:normal;
 }
 
-
-.dgwt-wcas-style-pirx .dgwt-wcas-sf-wrapp {
-  background: initial;
-  padding: 10px;
-  border-radius: initial;
-}
-
-.dgwt-wcas-style-pirx .dgwt-wcas-sf-wrapp input[type=search].dgwt-wcas-search-input{
-  border-radius: 50px;
-  background: rgba(255, 255, 255, 0.15) !important;
-  color: rgba(255, 255, 255, 0.88);
-  font-family: Avenir;
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
-  padding: 13px 54px 13px 20px;
-}
-
-.dgwt-wcas-search-wrapp {
-  max-width: 800px;
-  width: 40vw;
-}
 
 li.html.custom.html_topbar_left,
 li.html.custom.html_topbar_left div.selectron23,
@@ -568,39 +540,19 @@ li.html.custom.html_topbar_left div.selectron23,
 }
 
 
-.selectron23-container .selectron23-option{
-  padding: 9px 20px 9px 30px !important;
-}
-
-
-
-
-
-.selectron23-container{
-  background: initial !important;
-}
-
-.selectron23-option{
-  background:initial !important;
-}
-
-.selectron23-container[data-opened="0"]{
-  max-height: 40px !important;
-  min-height: 40px !important;
-}
-
-.selectron23-container[data-opened="1"]{
-  max-height:	initial  !important;
-  min-height:initial  !important;
-}
 
 .post-type-archive-product .shop-page-title,
-.archive .category-page-title{
-  padding-top:150px;
+.tax-product_cat .shop-page-title,
+.archive .shop-page-title{
+  padding-top:100px;
 }
 
 
-
+.post-type-archive-product #main,
+.tax-product_cat #main,
+.archive #main{
+  background: #F8F8F8;
+}
 
 
 
@@ -624,6 +576,9 @@ li.html.custom.html_topbar_left div.selectron23,
 
 .tabs li.active a{
   font-weight: 600!important;
+}
+ul.wc_payment_methods{
+  list-style: none;
 }
 
 

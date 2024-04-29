@@ -14,6 +14,7 @@ add_action('wp_head', function () {
         .shop-page-title.category-page-title {
             background-color: <?php echo get_field( 'header_color_bg_category', $cat) ?>;
         }
+
         <?php } ?>
 
         <?php if(get_theme_mod('site_width')) {

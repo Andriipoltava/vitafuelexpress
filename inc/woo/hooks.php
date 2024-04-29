@@ -1,5 +1,63 @@
 <?php
+remove_action('woocommerce_single_product_summary', 'woocommerce_template_single_price', 10);
+add_action('woocommerce_single_product_summary', 'woocommerce_template_single_price', 25);
+add_filter('woocommerce_product_tabs','child_flatsome_custom_product_tabs');
 
+// Custom Product Tabs
+function child_flatsome_custom_product_tabs( $tabs ) {
+    global $wc_cpdf;
+    unset($tabs['additional_information']);
+
+    $tabs['product_ingredients_tab'] = array(
+        'title'   => __('Other ingredients','flatsome-child'),
+        'priority'  => 40,
+        'callback'  => 'child_flatsome_product_ingredients_tab'
+    );
+    $tabs['product_supplements_tab'] = array(
+        'title'   => __('Supplement Facts','flatsome-child'),
+        'priority'  => 50,
+        'callback'  => 'child_flatsome_product_supplements_tab'
+    );
+    $tabs['product_directions_tab'] = array(
+        'title'   => __('Directions / Dosage','flatsome-child'),
+        'priority'  => 60,
+        'callback'  => 'child_flatsome_product_directions_tab'
+    );
+    return $tabs;
+}
+
+add_filter( 'woocommerce_product_tabs', 'flatsome_custom_product_tabs' );
+function child_flatsome_product_ingredients_tab() {
+    echo get_field('other_ingeredients');
+}
+function child_flatsome_product_supplements_tab() {
+    global $product;
+    $supplements = wc_get_product_terms( $product->id, 'pa_supplement-facts');
+    if($supplements):?>
+        <div class="row">
+            <?php foreach( $supplements as $supplement ): ?>
+            <div class="col small-4 medium-3 pb-0 mb-0 text-center">
+                <?php $icon = get_field('icon', 'pa_supplement-facts_'.$supplement->term_id);?>
+                <?php echo wp_get_attachment_image($icon['ID'])?>
+                <h6><?php echo $supplement->name?></h6>
+            </div>
+        <?php endforeach; ?>
+        </div>
+    <?php endif;
+}
+function child_flatsome_product_directions_tab() {
+    $directions = get_field('directionsdosage');
+    foreach ($directions as $direction):?>
+        <div class="row">
+            <div class="col small-4 large-3 pb-0 mb-0 text-center">
+                <?php echo wp_get_attachment_image($direction['icon']['ID'])?>
+                <h6><?php echo $direction['title']?></h6>
+            </div>
+            <div class="col small-8 large-9 pb-0 mb-0"><?php echo $direction['content']?></div>
+        </div>
+
+    <?php endforeach;
+}
 function get_icon_url($country)
 {
     return 'https://exactly.com';
