@@ -290,6 +290,9 @@ a.button.is-outline > i[class^="icon-"]
 .blog-wrapper.blog-archive.page-wrapper{
   padding-top: 140px;
   background: #F2F2F2;
+  @media (max-width: $table) {
+    padding-top: 70px;
+  }
 }
 
 .blog-wrapper.blog-archive.page-wrapper .box-text p{
@@ -324,11 +327,18 @@ a.button.is-outline > i[class^="icon-"]
 
 
 
-
+.category-page-title,
 .page #content,
 .single #content{
-  padding-top:140px;
+  padding-top:150px;
   background: #F2F2F2;
+  @media (max-width: $table) and  (min-width: $mobile) {
+    padding-top: 96px;
+  }
+
+  @media (max-width: $mobile) {
+    padding-top: 70px;
+  }
 }
 
 
@@ -537,14 +547,6 @@ li.html.custom.html_topbar_left div.selectron23,
 .html.custom.html_topbar_left>div,
 .selectron23{
   width:100px !important;
-}
-
-
-
-.post-type-archive-product .shop-page-title,
-.tax-product_cat .shop-page-title,
-.archive .shop-page-title{
-  padding-top:100px;
 }
 
 

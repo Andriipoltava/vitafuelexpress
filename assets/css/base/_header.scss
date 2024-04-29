@@ -19,8 +19,6 @@
     border: initial !important;
     padding: 20px 0;
   }
-
-
 }
 
 .header-button a,
@@ -50,17 +48,34 @@ body .header-full-width .container {
 
   .header-bottom {
     border-top: 1px solid rgba(0, 0, 0, 0.15);
-
+    //z-index: 11;
     background: $white;
 
     .menu-item {
       margin: 0 12px;
+
+      &.has-icon-left {
+        .nav-top-link {
+          flex-direction: row-reverse;
+          gap: 5px;
+          align-items: center;
+
+        }
+
+      }
+
+      &.sale {
+        a {
+          color: #FF5C00
+        }
+      }
 
       a {
         font-family: $font-outfit;
         font-weight: 400;
         font-size: 16px;
         line-height: 125%;
+        border: none;
       }
 
       .nav-top-link {
@@ -73,22 +88,21 @@ body .header-full-width .container {
 
   }
 
+  .sub-menu {
+    font-family: $font-outfit;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 125%;
+    color: #000;
+  }
+
 
 }
 
-.home .header-wrapper .selectron23-container[data-opened="0"] > span {
-  border: initial !important;
-  width: 24px;
-  height: 24px;
-  background: url(/wp-content/uploads/2023/11/Arrow-Down-wh.svg);
-  background-size: 100%;
-  background-repeat: no-repeat;
-  position: absolute;
-  top: 8px !important;
-  right: -4px;
-}
 
-.header-wrapper .selectron23-container[data-opened="0"] > span, .header-wrapper.stuck .selectron23-container[data-opened="0"] > span {
+
+.header-wrapper .selectron23-container[data-opened="0"] > span,
+.header-wrapper.stuck .selectron23-container[data-opened="0"] > span {
   border: initial !important;
   width: 24px;
   height: 24px;
@@ -96,7 +110,7 @@ body .header-full-width .container {
   background-size: 100%;
   background-repeat: no-repeat;
   position: absolute;
-  top: 8px !important;
+  top: 5px !important;
   right: -4px;
 }
 
@@ -168,13 +182,17 @@ body .header-full-width .container {
 .header-info-section  .col:nth-child(3) .col-inner{
   border-right:initial;
 }
-
+.nav-right
+.cart-item{
+  display: flex;
+  align-items: center;
+}
 .cart-item,
 .account-item {
   .header-cart-link,
   .account-link {
     display: flex;
-    flex-direction: row-reverse;
+    //flex-direction: row-reverse;
     gap: 10px;
     align-items: center;
   }
@@ -193,7 +211,8 @@ body .header-full-width .container {
   color: #000 !important;
 }
 
-
+.selectron23 {
+  z-index: 40 !important;
 .selectron23-container {
   position: relative;
 
@@ -209,8 +228,13 @@ body .header-full-width .container {
   }
 
   &[data-opened="0"] {
-    max-height: 40px !important;
-    min-height: 40px !important;
+    z-index: 40 !important;
+    max-height: 34px !important;
+    min-height: 34px !important;
+    @media (max-width: $table) {
+      max-height: 34px !important;
+      min-height: 34px !important;
+    }
   }
 
   &[data-opened="1"] {
@@ -218,9 +242,6 @@ body .header-full-width .container {
     min-height: initial !important;
   }
 
-  span:last-child {
-    top: 18px !important;
-  }
 
   .selectron23-option {
     padding: 9px 20px 9px 30px !important;
@@ -228,6 +249,7 @@ body .header-full-width .container {
   }
 
 
+}
 }
 
 .header-wrapper.stuck .header-logo,
@@ -241,8 +263,15 @@ body .header-full-width .container {
   display:block !important;
 }
 
-.header-wrapper #logo img{
-  max-height: 36px !important;
+.header-wrapper #logo {
+  @media screen and (max-width: 1024px) and (min-width: $table) {
+    width: 120px;
+  }
+
+  img {
+    max-height: 36px !important;
+
+  }
 }
 
 
@@ -261,7 +290,12 @@ body .header-full-width .container {
     font-size: 18px;
     line-height: 133%;
     color: rgba(0, 0, 0, 0.25);
-    @media screen and (min-width: 1024px) {
+    z-index: 50;
+    position: relative;
+    @media screen and (max-width: $laptop) and (min-width: $table) {
+      width: 280px;
+    }
+    @media screen and (min-width: $laptop) {
       width: 412px;
     }
   }
@@ -279,6 +313,7 @@ body .header-full-width .container {
   left: initial;
   top: 18px;
   right: 30px;
+  z-index: 51;
 }
 
 .dgwt-wcas-has-submit .dgwt-wcas-search-submit svg  {
@@ -456,6 +491,9 @@ header {
 .header-wrapper .burger-menu-section img.header-logo-dark {
   display: block !important;
   width: 180px;
+  @media (max-width: $table) {
+    width: 110px;
+  }
 }
 
 .category-link {
@@ -554,19 +592,6 @@ header {
   width: calc(100% - 200px);
 }
 
-.home .header-wrapper .menuburger-btn {
-  display: block;
-  width: 24px;
-  height: 24px;
-  background: url(/wp-content/uploads/2023/11/burger.svg);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 100%;
-  margin: 0 40px 0 0;
-  cursor: pointer;
-  filter: invert(0) !important;
-
-}
 
 .header-wrapper.stuck .menuburger-btn,
 .header-wrapper .menuburger-btn {
@@ -580,7 +605,7 @@ header {
   margin: 0 40px 0 0;
   cursor: pointer;
   filter: invert(1) !important;
-  @media screen and (min-width: 1024px) {
+  @media screen and (min-width: $table) {
     display: none !important;
   }
 }
@@ -633,10 +658,7 @@ header {
     margin-top: 2px;
   }
 
-  .header-wrapper .burger-menu-section img.header-logo-dark {
-    display: block !important;
-    width: 160px;
-  }
+
 
   .header-wrapper .burger-menu-section .selectron23 {
     right: 15px;
@@ -653,7 +675,7 @@ header {
     background-position: center;
     background-size: 100%;
     position: absolute;
-    top: 20px;
+    top: 24px;
     left: 20px;
   }
 

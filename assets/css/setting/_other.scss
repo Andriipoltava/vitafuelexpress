@@ -3,6 +3,65 @@
   padding-right: 22px;
 }
 
+.dgwt-wcas-focused {
+
+}
+
+.dgwt-wcas-focused {
+  height: 100vh;
+  overflow: hidden;
+
+  .header-bottom {
+    z-index: 6 !important;
+  }
+
+  #masthead .dgwt-wcas-sf-wrapp:before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background: rgba(0, 0, 0, 0.75);
+    z-index: 20;
+    left: 0;
+    top: 0;
+
+  }
+
+  .dgwt-wcas-search-input {
+    z-index: 10;
+  }
+}
+
+body:has(.has-dropdown.current-dropdown) {
+  height: 100vh;
+  overflow: hidden;
+
+  .header-bottom:has(.has-dropdown.current-dropdown) {
+    z-index: 11;
+  }
+
+  #wide-nav .current-dropdown {
+    &:before {
+      content: '';
+      width: 100%;
+      height: 100%;
+      position: fixed;
+      background: rgba(0, 0, 0, 0.75);
+      z-index: 54;
+      left: 0;
+      top: 0;
+      margin: 0;
+      bottom: 0;
+      right: 0;
+      opacity: 1;
+    }
+
+    .nav-dropdown {
+      z-index: 111;
+    }
+  }
+
+}
 .slider-nav-circle .flickity-prev-next-button svg {
   background: #47474A;
   border-radius: 8px;
