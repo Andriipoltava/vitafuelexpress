@@ -277,6 +277,9 @@ add_action('woocommerce_category_before_main_content', function () {
     <div class="row"><?php
         foreach ($terms as $term) {
             $thumbnail_id = get_woocommerce_term_meta($term->term_id, 'thumbnail_id', true);
+            if(!get_field('show_to_archive_pages',$term)){
+                continue;
+            }
             $image = wp_get_attachment_image($thumbnail_id); ?>
 
 
