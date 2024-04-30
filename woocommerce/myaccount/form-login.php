@@ -31,22 +31,22 @@ do_action( 'woocommerce_before_customer_login_form' ); ?>
 
 	<?php if ( 'yes' === get_option( 'woocommerce_enable_myaccount_registration' ) ) : ?>
 
-	<div class="col2-set row row-divided row-large" id="customer_login">
+	<div class="col2-set row row-divided row-popup" id="customer_login">
 
-		<div class="col-1 large-6 col pb-0">
+		<div class="col-1 large-12 col pb-0">
 
 			<?php endif; ?>
 
 			<div class="account-login-inner">
 
-				<h3 class="uppercase"><?php esc_html_e( 'Login', 'woocommerce' ); ?></h3>
+				<h3 class="uppercase"><?php esc_html_e( 'Enter your account', 'woocommerce' ); ?></h3>
 
 				<form class="woocommerce-form woocommerce-form-login login" method="post">
 
 					<?php do_action( 'woocommerce_login_form_start' ); ?>
 
 					<p class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide">
-						<label for="username"><?php esc_html_e( 'Username or email address', 'woocommerce' ); ?>&nbsp;<span class="required">*</span></label>
+						<label for="username"><?php esc_html_e( 'Email Adress', 'woocommerce' ); ?>&nbsp;<span class="required">*</span></label>
 						<input type="text" class="woocommerce-Input woocommerce-Input--text input-text" name="username" id="username" autocomplete="username" value="<?php echo ( ! empty( $_POST['username'] ) ) ? esc_attr( wp_unslash( $_POST['username'] ) ) : ''; ?>" /><?php // @codingStandardsIgnoreLine ?>
 					</p>
 					<p class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide">
@@ -56,18 +56,21 @@ do_action( 'woocommerce_before_customer_login_form' ); ?>
 
 					<?php do_action( 'woocommerce_login_form' ); ?>
 
+                    <p class="woocommerce-LostPassword lost_password">
+                        <a href="<?php echo esc_url( wp_lostpassword_url() ); ?>"><?php esc_html_e( 'Forgot your password?', 'woocommerce' ); ?></a>
+                    </p>
 					<p class="form-row">
-						<label class="woocommerce-form__label woocommerce-form__label-for-checkbox woocommerce-form-login__rememberme">
-							<input class="woocommerce-form__input woocommerce-form__input-checkbox" name="rememberme" type="checkbox" id="rememberme" value="forever" /> <span><?php esc_html_e( 'Remember me', 'woocommerce' ); ?></span>
-						</label>
 						<?php wp_nonce_field( 'woocommerce-login', 'woocommerce-login-nonce' ); ?>
-						<button type="submit" class="woocommerce-button button woocommerce-form-login__submit<?php if ( fl_woocommerce_version_check( '7.0.1' ) ) { echo esc_attr( wc_wp_theme_get_element_class_name( 'button' ) ? ' ' . wc_wp_theme_get_element_class_name( 'button' ) : '' ); } ?>" name="login" value="<?php esc_attr_e( 'Log in', 'woocommerce' ); ?>"><?php esc_html_e( 'Log in', 'woocommerce' ); ?></button>
-					</p>
-					<p class="woocommerce-LostPassword lost_password">
-						<a href="<?php echo esc_url( wp_lostpassword_url() ); ?>"><?php esc_html_e( 'Lost your password?', 'woocommerce' ); ?></a>
+						<button type="submit" class="woocommerce-button button woocommerce-form-login__submit<?php if ( fl_woocommerce_version_check( '7.0.1' ) ) { echo esc_attr( wc_wp_theme_get_element_class_name( 'button' ) ? ' ' . wc_wp_theme_get_element_class_name( 'button' ) : '' ); } ?>" name="login" value="<?php esc_attr_e( 'Log in', 'woocommerce' ); ?>"><?php esc_html_e( 'Sign in', 'woocommerce' ); ?></button>
 					</p>
 
 					<?php do_action( 'woocommerce_login_form_end' ); ?>
+
+
+                    <p class="form-row create-account-link">
+                        <span><?php _e('Dont have account yet?','flatsome-child')?></span>
+                        <a href="#"><?php _e('Create one','flatsome-child')?></a>
+                    </p>
 
 				</form>
 			</div>
@@ -76,11 +79,11 @@ do_action( 'woocommerce_before_customer_login_form' ); ?>
 
 		</div>
 
-		<div class="col-2 large-6 col pb-0">
+		<div class="col-2 large-12 col pb-0" >
 
-			<div class="account-register-inner">
+			<div class="account-register-inner" style="display: none">
 
-				<h3 class="uppercase"><?php esc_html_e( 'Register', 'woocommerce' ); ?></h3>
+				<h3 class="uppercase"><?php esc_html_e( 'Create account', 'woocommerce' ); ?></h3>
 
 				<form method="post" class="woocommerce-form woocommerce-form-register register" <?php do_action( 'woocommerce_register_form_tag' ); ?> >
 

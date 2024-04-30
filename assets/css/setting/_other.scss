@@ -122,3 +122,6 @@ body:has(.header-bottom-nav .current-dropdown){
 .irs-bar, .irs--big .irs-from, .irs--big .irs-to, .irs--big .irs-single, .irs--big .irs-grid-pol{
   background:var(--color-cherry) !important;
 }
+.svg-fill-transparent svg path{
+  fill: transparent;
+}

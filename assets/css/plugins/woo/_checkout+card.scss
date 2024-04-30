@@ -22,6 +22,10 @@ body.woocommerce-cart .cart-auto-refresh, body.woocommerce-checkout .woocommerce
   max-width: 100%;
   flex-basis: 100%;
   padding: 20px 30px !important;
+
+  @media (max-width: 768px) {
+    padding: 10px 15px!important;
+  }
 }
 
 .checkout_coupon.woocommerce-form-coupon {
@@ -336,7 +340,7 @@ form.woocommerce-checkout label,
   font-style: normal;
   font-weight: 500;
   line-height: 12px;
-  padding-left: 15px;
+  /*padding-left: 15px;*/
 }
 
 
@@ -361,10 +365,17 @@ body.woocommerce-cart .coupon button {
 
 body.woocommerce-cart .cart-auto-refresh,
 body.woocommerce-checkout .woocommerce-checkout .large-7 {
-  max-width: calc(100% - 400px);
-  flex-basis: calc(100% - 400px);
+  @media(min-width: 850px) {
+    max-width: calc(100% - 400px);
+    flex-basis: calc(100% - 400px);
+  }
 }
-
+body .container .message-wrapper .message-container{
+  padding: 0 30px;
+  @media (max-width: 768px) {
+    padding: 0 15px;
+  }
+}
 body.woocommerce-checkout .woocommerce-checkout .large-7 {
   padding: 0 20px 0 0;
 }

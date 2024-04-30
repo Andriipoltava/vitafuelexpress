@@ -345,8 +345,12 @@ a.button.is-outline > i[class^="icon-"]
 .single #main,
 .page-id-6080  #main,
 .error404  #main{
-  background: #F2F2F2;
+  background: #FAFAFA;
   padding-top:130px;
+}
+
+.page-id-7130 #main{
+  background: #FAFAFA;
 }
 
 .error404  #main .searchform{
@@ -583,7 +587,92 @@ ul.wc_payment_methods{
   list-style: none;
 }
 
+.small-page-container{
+  max-width: 1042px;
+  margin: 0 auto;
+}
+.contact-page-title{
+  .page-title-inner{
+    flex-direction: column;
+    align-items: start;
+    h1{
+      font-size: 36px;
+      font-weight: 500;
+    }
+    .title-content{
+      text-align: left;
+      margin-left: 0;
+    }
+  }
+}
+.help-center-links{
+  .col-inner{
+    background: #FFFFFF;
+    padding: 18px 24px 24px;
+    .section-title-container {
+      margin-bottom: 0;
+      .section-title-main {
+        border-bottom: none;
+        font-family: $font-outfit;
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 1.2em;
+        padding-bottom: 18px;
+      }
+    }
+    .ux-menu-link {
+      .ux-menu-link__link {
+        font-family: $font-outfit;
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 1.2em;
+        border-bottom: none !important;
+      }
+      &.active {
+        .ux-menu-link__link {
+          color: var(--color-cherry);
+          text-decoration: underline;
+        }
+      }
+    }
+  }
 
+}
 
+.help-center-faq{
+  .help-center-faq-title {
+    h4 {
+      font-family: $font-outfit;
+      font-size: 28px;
+      font-weight: 500;
+      line-height: 28px;
+    }
+  }
+  .accordion-item{
+    .accordion-title{
+      font-family: $font-outfit;
+      font-size: 18px;
+      font-weight: 600;
+      line-height: 18px;
+      padding-top: 24px;
+      padding-bottom: 24px;
+      border-top: 0;
+      .toggle{
+        top:50%;
+        transform: translateY(-50%);
+      }
+    }
+    .accordion-inner{
+      p{
+        font-family: $font-outfit;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 24px;
+        text-align: left;
+
+      }
+    }
+  }
+}
 
 

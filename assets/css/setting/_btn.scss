@@ -129,7 +129,7 @@ body .white.button.is-outline span {
 }
 
 body .white.button.is-outline:hover span {
-  color: #000;
+  color: #ffffff;
 }
 
 body .white.button.is-outline:after {
@@ -142,10 +142,6 @@ body .white.button.is-outline:after {
   background-repeat: no-repeat;
   background-position: center;
   margin: 0 0 0 10px;
-}
-
-body .white.button.is-outline:hover:after {
-  background: url(/wp-content/uploads/2024/04/arrow-narrow-right-black.svg);
 }
 
 .button.btn-orange.primary span {

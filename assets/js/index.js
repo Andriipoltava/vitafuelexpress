@@ -1,4 +1,9 @@
 jQuery(document).ready(function ($) {
+    $('.create-account-link a').on('click',function(e){
+        e.preventDefault();
+        $('#login-form-popup .account-login-inner').hide();
+        $('#login-form-popup .account-register-inner').fadeIn();
+    });
 
     $('#load-more').click(function (e) {
         e.preventDefault();
