@@ -1,6 +1,12 @@
 .homepage-about-section{
   padding: 100px;
   background: linear-gradient(to right,#ffffff00 50%, #CD1D48 50%);
+  @media screen and (max-width: $table) {
+    padding: 20px;
+    #col-466227936 > .col-inner{
+      padding: 20px;
+    }
+  }
 }
 
 .home-hero-title h1{
@@ -19,6 +25,36 @@
   line-height: 150%;
   color: rgba(255, 255, 255, 0.7);
 }
+.sale-box{
+  background: $sale;
+  min-height: 400px;
+  display: flex;
+  align-items: end;
+  .box-text{
+    @media screen and (max-width: $mobile) {
+      padding: 30px;
+    }
+  }
+}
 
 
+.sale-off, .sale-off p {
+  /* 40% Off */
+  font-family: 'Outfit';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 163.777px;
+  @media screen and (max-width: 1200px) {
+    font-size: 83.777px;
+  }  @media screen and (max-width: $mobile) {
+    font-size: 53.777px;
+  }
+  line-height: 1em;
+
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+  color: #E14400;
+
+
+}
 

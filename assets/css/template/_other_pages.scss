@@ -7,7 +7,7 @@
 
 .about-section h3{
   font-variant-numeric: lining-nums proportional-nums;
-  font-family: var(--font-korto);
+  font-family: $font-outfit;
   font-size: 48px;
   font-style: normal;
   font-weight: 600;
@@ -325,13 +325,13 @@ a.button.is-outline > i[class^="icon-"]
   border-radius: var(--Box-Spacing);
 }
 
-
-
+.woocommerce-account #main,
+.single-product .page-title,
 .category-page-title,
 .page #content,
 .single #content{
-  padding-top:150px;
-  background: #F2F2F2;
+  padding-top:130px;
+
   @media (max-width: $table) and  (min-width: $mobile) {
     padding-top: 96px;
   }
@@ -484,7 +484,7 @@ li.html.custom.html_topbar_left div.selectron23,
 .catalog-section h3{
   color: #000;
   font-variant-numeric: lining-nums proportional-nums;
-  font-family: var(--font-korto);
+  font-family: $font-outfit;
   font-size: 48px;
   font-style: normal;
   font-weight: 600;

@@ -5,7 +5,7 @@
   color: #000;
 
   font-variant-numeric: lining-nums proportional-nums;
-  font-family: var(--font-korto);
+  font-family: v $font-outfit;
   font-size: 24px;
   font-style: normal;
   font-weight: 500;
@@ -105,7 +105,7 @@
 .woocommerce-Tabs-panel p,
 .woocommerce-Tabs-panel h3{
   color: #000;
-  font-family: var(--font-korto);
+  font-family: $font-outfit;
   font-size: 18px;
   font-weight: 400;
   line-height: 170%;
@@ -114,18 +114,45 @@
 .single-product .product-section-title{
   color: #000;
   font-variant-numeric: lining-nums proportional-nums;
-  font-family: var(--font-korto);
-  font-size: 32px;
+  font-family: $font-outfit;
+  font-size: 36px;
   font-style: normal;
+  text-align: center;
+  text-transform: uppercase;
   font-weight: 500;
   line-height: 116%;
-  text-transform:initial;
+
 }
 
 .single-product .related.related-products-wrapper{
   padding:100px 0px 100px;
   border-top:1px solid rgba(0, 0, 0, 0.14);
-  margin-top:100px;
+  background: #FAFAFA;
+  position: relative;
+
+  .row.row-small {
+    z-index: 11;
+  }
+
+  &:before {
+    content: '';
+    position: absolute;
+    right: 100%;
+    top: 0;
+    width: 50vw;
+    height: 100%;
+    background: #FAFAFA;
+  }
+
+  &:after {
+    content: '';
+    position: absolute;
+    left: 100%;
+    top: 0;
+    width: 50vw;
+    height: 100%;
+    background: #FAFAFA;
+  }
 }
 
 .single-product .tabs li a:before{
@@ -136,7 +163,7 @@
 
 .single-product .price del span.amount{
   color: #B8B8B8;
-  font-family: var(--font-korto);
+  font-family: $font-outfit;
   font-size: 14px;
   font-style: normal;
   font-weight: 500;
@@ -146,7 +173,7 @@
 
 .single-product .price ins span.amount{
   color: var(--color-cherry);
-  font-family: var(--font-korto);
+  font-family: $font-outfit;
   font-size: 24px;
   font-style: normal;
   font-weight: 700;
@@ -163,17 +190,22 @@
   vertical-align: initial;
 }
 
-.product-container .single_add_to_cart_button{
+.product-container .summary .cart .single_add_to_cart_button{
   border-radius: 8px !important;
   background-color: var(--color-cherry) !important;
   width: 90%;
   padding: 13px 20px !important;
   color: var(--color-white, #FFF) !important;
-  font-family: var(--font-korto) !important;
+  font-family: $font-outfit !important;
   font-size: 16px !important;
   font-style: normal !important;
   font-weight: 700 !important;
   line-height: normal !important;
   text-transform: uppercase !important;
   border: initial;
+}
+
+.hover-slide, .hover-slide-in, .hover-zoom, .hover-zoom-in, .show-on-hover {
+  opacity: 1;
+
 }

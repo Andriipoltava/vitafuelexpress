@@ -23,7 +23,7 @@
 
   .slider-nav-reveal .flickity-prev-next-button.next {
     left: auto!important;
-    right: -8px!important;
+    right: -38px!important;
   }
 
   .col-inner h2
@@ -130,8 +130,8 @@
   }
 
   span.amount {
-    color: rgba(18, 17, 39, 0.8);
-    font-family: 'Archivo';
+    color: #000000;
+    font-family: $font-outfit;
     font-style: normal;
     font-weight: 500;
     font-size: 22px;
@@ -273,7 +273,7 @@
 
   footer .ux-menu-link__link {
     color: rgba(255, 255, 255, 0.90);
-    font-family: var(--font-korto);
+    font-family: $font-outfit;
     font-size: 18px;
     font-style: normal;
     font-weight: 500;
@@ -291,7 +291,7 @@
 
   footer .ux-menu-title {
     color: var(--color-white, #FFF);
-    font-family: var(--font-korto);
+    font-family: $font-outfit;
     font-size: 22px;
     font-style: normal;
     font-weight: 600;
@@ -311,7 +311,7 @@
   .form-footer p {
     color: var(--color-white, #FFF);
     font-variant-numeric: lining-nums proportional-nums;
-    font-family: var(--font-korto);
+    font-family: $font-outfit;
     font-size: 16px;
     font-style: normal;
     font-weight: 500;

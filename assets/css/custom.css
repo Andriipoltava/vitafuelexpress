@@ -50,8 +50,15 @@ body .header-full-width .container {
   max-width: 1570px !important;
 }
 
+.nav-dropdown-has-arrow li.has-dropdown:after, .nav-dropdown-has-arrow li.has-dropdown:before {
+  display: none !important;
+}
+
 #header {
   background: #fff;
+}
+#header .header-main {
+  height: 72px;
 }
 #header .header-main .nav-left {
   justify-content: space-evenly;
@@ -185,6 +192,27 @@ body .header-full-width .container {
   align-items: center;
 }
 
+.header-wrapper .header-bottom-nav.nav > li > a,
+.header-wrapper .header-nav-main.nav > li > a {
+  position: relative;
+}
+.header-wrapper .header-bottom-nav.nav > li > a:after,
+.header-wrapper .header-nav-main.nav > li > a:after {
+  content: "";
+  width: 100%;
+  height: 2px;
+  opacity: 0;
+  display: block !important;
+  background: #ff5c00;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+.header-wrapper .header-bottom-nav.nav > li > a:hover:after,
+.header-wrapper .header-nav-main.nav > li > a:hover:after {
+  opacity: 1;
+}
+
 .header:not(.transparent) .header-wrapper.stuck .header-nav-main.nav > li > a,
 .header:not(.transparent) .header-wrapper.stuck .selectron23-option-title,
 .header:not(.transparent) .header-wrapper .header-nav-main.nav > li > a,
@@ -264,9 +292,15 @@ body .header-full-width .container {
   font-weight: 400;
   font-size: 18px;
   line-height: 133%;
-  color: rgba(0, 0, 0, 0.25);
+  color: rgba(0, 0, 0, 0.75);
   z-index: 50;
   position: relative;
+}
+.header-wrapper .dgwt-wcas-style-pirx .dgwt-wcas-sf-wrapp input[type=search].dgwt-wcas-search-input::placeholder,
+.header-wrapper .dgwt-wcas-style-pirx .dgwt-wcas-sf-wrapp input[type=search].dgwt-wcas-search-input::placeholder,
+.header-wrapper.stuck .dgwt-wcas-style-pirx .dgwt-wcas-sf-wrapp input[type=search].dgwt-wcas-search-input::placeholder,
+.header-wrapper.stuck .dgwt-wcas-style-pirx .dgwt-wcas-sf-wrapp input[type=search].dgwt-wcas-search-input::placeholder {
+  color: rgba(0, 0, 0, 0.25);
 }
 @media screen and (max-width: 1024px) and (min-width: 849px) {
   .header-wrapper .dgwt-wcas-style-pirx .dgwt-wcas-sf-wrapp input[type=search].dgwt-wcas-search-input,
@@ -802,6 +836,10 @@ header + .message-wrapper {
     right: -4px;
   }
 }
+.nav > li > a {
+  padding: 20px 0;
+}
+
 .absolute-footer .container {
   display: grid;
   grid-template-columns: 1fr;
@@ -835,7 +873,7 @@ footer .menu-colum:nth-child(3) {
 
 footer .ux-menu-title {
   color: var(--color-white, #FFF);
-  font-family: var(--font-korto);
+  font-family: "Outfit";
   font-size: 24px;
   font-style: normal;
   font-weight: 600;
@@ -847,7 +885,7 @@ footer .ux-menu-title {
 
 footer .ux-menu-link__link {
   color: rgba(255, 255, 255, 0.9);
-  font-family: var(--font-korto);
+  font-family: "Outfit";
   font-size: 18px;
   font-style: normal;
 }
@@ -864,7 +902,7 @@ footer .wpforms-container .wpforms-field input {
   border-radius: 50px !important;
   background: rgba(255, 255, 255, 0.26) !important;
   color: rgba(255, 255, 255, 0.88) !important;
-  font-family: var(--font-korto) !important;
+  font-family: "Outfit" !important;
   font-size: 16px !important;
   font-style: normal !important;
   font-weight: 400 !important;
@@ -892,7 +930,6 @@ footer .wpforms-submit {
 
 footer .wpforms-submit:before {
   content: "";
-  content: "";
   display: block;
   width: 24px;
   height: 24px;
@@ -905,7 +942,7 @@ footer .wpforms-submit:before {
 .form-footer p {
   color: var(--color-white, #FFF);
   font-variant-numeric: lining-nums proportional-nums;
-  font-family: var(--font-korto);
+  font-family: "Outfit";
   font-size: 24px;
   font-style: normal;
   font-weight: 500;
@@ -928,7 +965,7 @@ footer .wpforms-submit:before {
   color: var(--color-white, #FFF);
   text-align: right;
   font-variant-numeric: lining-nums proportional-nums;
-  font-family: var(--font-korto);
+  font-family: "Outfit";
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
@@ -940,7 +977,7 @@ footer .wpforms-submit:before {
   order: 1;
   color: var(--color-white, #FFF);
   font-variant-numeric: lining-nums proportional-nums;
-  font-family: var(--font-korto);
+  font-family: "Outfit";
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
@@ -978,7 +1015,7 @@ footer .absolute-footer .footer-secondary {
 .btn.btn-logout {
   padding: 11px 34px;
   color: #fff;
-  font-family: "Archivo";
+  font-family: "Outfit";
   font-style: normal;
   background: var(--color-cherry);
   border-radius: 5px;
@@ -986,7 +1023,7 @@ footer .absolute-footer .footer-secondary {
 
 .button span {
   font-weight: 400;
-  font-family: "Poppins";
+  font-family: "Outfit";
   font-style: normal;
   font-weight: 500;
   font-size: 14px;
@@ -1138,7 +1175,7 @@ body .white.button.is-outline:hover:after {
 
 .button.secondary span {
   color: #000;
-  font-family: var(--font-korto);
+  font-family: "Outfit";
   font-size: 16px;
   font-style: normal;
   font-weight: 600;
@@ -1174,7 +1211,7 @@ input#button-subscribe {
 
 .button.primary span {
   color: var(--color-cherry) !important;
-  font-family: Avenir Next;
+  font-family: "Outfit";
   font-size: 16px !important;
   font-style: normal !important;
   font-weight: 700 !important;
@@ -1276,13 +1313,13 @@ h1, h2, h3, h4, h5, h6 {
   color: #1F0C01;
   opacity: 1;
   text-transform: inherit;
-  font-family: "Archivo";
+  font-family: "Outfit";
 }
 
 .single .entry-title {
   color: #000;
   font-variant-numeric: lining-nums proportional-nums;
-  font-family: var(--font-korto);
+  font-family: "Outfit";
   font-size: 32px;
   font-style: normal;
   font-weight: 500;
@@ -1312,7 +1349,7 @@ h1 {
 .header-section h3 {
   color: #000;
   font-variant-numeric: lining-nums proportional-nums;
-  font-family: var(--font-korto);
+  font-family: "Outfit";
   font-size: 42px;
   font-style: normal;
   font-weight: 600;
@@ -1322,7 +1359,7 @@ h1 {
 .contact-section h3 {
   color: #000;
   font-variant-numeric: lining-nums proportional-nums;
-  font-family: var(--font-korto);
+  font-family: "Outfit";
   font-size: 32px;
   font-style: normal;
   font-weight: 500;
@@ -1331,7 +1368,7 @@ h1 {
 
 .contact-section h4 {
   color: #000;
-  font-family: var(--font-korto);
+  font-family: "Outfit";
   font-size: 14px;
   font-style: normal;
   font-weight: 600;
@@ -1342,7 +1379,7 @@ h1 {
 
 .contact-section h4 + p {
   color: #000;
-  font-family: var(--font-korto);
+  font-family: "Outfit";
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
@@ -1376,29 +1413,53 @@ h1 {
   z-index: 10;
 }
 
-body:has(.has-dropdown.current-dropdown) {
+body:has(.header-bottom-nav .current-dropdown) {
   height: 100vh;
   overflow: hidden;
 }
-body:has(.has-dropdown.current-dropdown) .header-bottom:has(.has-dropdown.current-dropdown) {
-  z-index: 11;
+body:has(.header-bottom-nav .current-dropdown) .header-bottom-nav .current-dropdown {
+  color: red;
 }
-body:has(.has-dropdown.current-dropdown) #wide-nav .current-dropdown:before {
-  content: "";
+body:has(.header-bottom-nav .current-dropdown) .header-bottom-nav .current-dropdown:before {
+  content: "" !important;
   width: 100%;
-  height: 100%;
   position: fixed;
+  display: block !important;
   background: rgba(0, 0, 0, 0.75);
-  z-index: 54;
+  border: none !important;
+  z-index: 111;
   left: 0;
-  top: 0;
-  margin: 0;
   bottom: 0;
+  height: calc(100% - 130px);
+  top: 130px;
+  margin: 0;
   right: 0;
   opacity: 1;
 }
-body:has(.has-dropdown.current-dropdown) #wide-nav .current-dropdown .nav-dropdown {
+@media screen and (min-width: 849px) and (max-width: 1024px) {
+  body:has(.header-bottom-nav .current-dropdown) .header-bottom-nav .current-dropdown:before {
+    height: calc(100% - 100px);
+    top: 100px;
+  }
+}
+@media screen and (max-width: 549px) {
+  body:has(.header-bottom-nav .current-dropdown) .header-bottom-nav .current-dropdown:before {
+    height: calc(100% - 70px);
+    top: 70px;
+  }
+}
+body:has(.header-bottom-nav .current-dropdown) .header-bottom-nav .current-dropdown .nav-dropdown {
   z-index: 111;
+}
+body:has(.header-bottom-nav .current-dropdown).admin-bar #wide-nav .current-dropdown:before {
+  height: calc(100% - 164px) !important;
+  top: 164px;
+}
+@media screen and (max-width: 849px) {
+  body:has(.header-bottom-nav .current-dropdown).admin-bar #wide-nav .current-dropdown:before {
+    height: calc(100% - 90px);
+    top: 90px;
+  }
 }
 
 .slider-nav-circle .flickity-prev-next-button svg {
@@ -1536,31 +1597,21 @@ body:has(.has-dropdown.current-dropdown) #wide-nav .current-dropdown .nav-dropdo
   margin: 10px 15px -3px 0px;
 }
 
-.sale-off, .sale-off p {
-  /* 40% Off */
-  font-family: "Outfit";
-  font-style: normal;
-  font-weight: 700;
-  font-size: 163.777px;
-  line-height: 1em;
-  margin-top: 0 !important;
-  margin-bottom: 0 !important;
-  color: #E14400;
-}
-
 .quantity.buttons_added .button {
-  border-radius: 24px !important;
+  border-radius: 6px !important;
   background: #F0F0F0;
   display: flex;
   width: 36px;
   height: 36px !important;
+  min-height: 10px;
+  max-height: 36px !important;
   padding: 0;
   justify-content: center;
   align-items: center;
   flex-shrink: 0;
-  font-size: 14px;
+  font-size: 24px;
+  line-height: 24px;
   border: initial !important;
-  border-bottom-left-radius: 24px !important;
 }
 
 .woocommerce-button {
@@ -2046,27 +2097,10 @@ body.woocommerce-checkout .woocommerce-checkout .row.pt-0 {
   padding: 0;
 }
 
-.product-container .single_add_to_cart_button:after {
-  content: "";
-  width: 24px;
-  height: 24px;
-  display: inline-block;
-  background: url(/wp-content/uploads/2023/11/shopping-cart-01.svg);
-  background-repeat: no-repeat;
-  background-size: 100%;
-  background-position: center;
-  margin: 0 0 -6px 7px;
-  animation: initial !important;
-  position: relative !important;
-  top: initial !important;
-  left: initial !important;
-  border: initial;
-}
-
 .widget-title.shop-sidebar {
   color: #000;
   font-variant-numeric: lining-nums proportional-nums;
-  font-family: var(--font-korto);
+  font-family: v "Outfit";
   font-size: 24px;
   font-style: normal;
   font-weight: 500;
@@ -2150,7 +2184,7 @@ body.woocommerce-checkout .woocommerce-checkout .row.pt-0 {
 .woocommerce-Tabs-panel p,
 .woocommerce-Tabs-panel h3 {
   color: #000;
-  font-family: var(--font-korto);
+  font-family: "Outfit";
   font-size: 18px;
   font-weight: 400;
   line-height: 170%;
@@ -2159,18 +2193,41 @@ body.woocommerce-checkout .woocommerce-checkout .row.pt-0 {
 .single-product .product-section-title {
   color: #000;
   font-variant-numeric: lining-nums proportional-nums;
-  font-family: var(--font-korto);
-  font-size: 32px;
+  font-family: "Outfit";
+  font-size: 36px;
   font-style: normal;
+  text-align: center;
+  text-transform: uppercase;
   font-weight: 500;
   line-height: 116%;
-  text-transform: initial;
 }
 
 .single-product .related.related-products-wrapper {
   padding: 100px 0px 100px;
   border-top: 1px solid rgba(0, 0, 0, 0.14);
-  margin-top: 100px;
+  background: #FAFAFA;
+  position: relative;
+}
+.single-product .related.related-products-wrapper .row.row-small {
+  z-index: 11;
+}
+.single-product .related.related-products-wrapper:before {
+  content: "";
+  position: absolute;
+  right: 100%;
+  top: 0;
+  width: 50vw;
+  height: 100%;
+  background: #FAFAFA;
+}
+.single-product .related.related-products-wrapper:after {
+  content: "";
+  position: absolute;
+  left: 100%;
+  top: 0;
+  width: 50vw;
+  height: 100%;
+  background: #FAFAFA;
 }
 
 .single-product .tabs li a:before {
@@ -2179,7 +2236,7 @@ body.woocommerce-checkout .woocommerce-checkout .row.pt-0 {
 
 .single-product .price del span.amount {
   color: #B8B8B8;
-  font-family: var(--font-korto);
+  font-family: "Outfit";
   font-size: 14px;
   font-style: normal;
   font-weight: 500;
@@ -2189,7 +2246,7 @@ body.woocommerce-checkout .woocommerce-checkout .row.pt-0 {
 
 .single-product .price ins span.amount {
   color: var(--color-cherry);
-  font-family: var(--font-korto);
+  font-family: "Outfit";
   font-size: 24px;
   font-style: normal;
   font-weight: 700;
@@ -2206,19 +2263,23 @@ body.woocommerce-checkout .woocommerce-checkout .row.pt-0 {
   vertical-align: initial;
 }
 
-.product-container .single_add_to_cart_button {
+.product-container .summary .cart .single_add_to_cart_button {
   border-radius: 8px !important;
   background-color: var(--color-cherry) !important;
   width: 90%;
   padding: 13px 20px !important;
   color: var(--color-white, #FFF) !important;
-  font-family: var(--font-korto) !important;
+  font-family: "Outfit" !important;
   font-size: 16px !important;
   font-style: normal !important;
   font-weight: 700 !important;
   line-height: normal !important;
   text-transform: uppercase !important;
   border: initial;
+}
+
+.hover-slide, .hover-slide-in, .hover-zoom, .hover-zoom-in, .show-on-hover {
+  opacity: 1;
 }
 
 #my-account-nav a {
@@ -2272,10 +2333,6 @@ body.woocommerce-checkout .woocommerce-checkout .row.pt-0 {
 
 .my-account .account-container {
   padding: 40px 0;
-}
-
-.woocommerce-account #main {
-  padding-top: 150px;
 }
 
 .my-account-header h1 {
@@ -2537,6 +2594,29 @@ li#tab-new.active > a {
   background-color: #3EC956;
 }
 
+.icon-heart:before {
+  width: 22px;
+  height: 20px;
+  position: relative;
+  display: block;
+  content: "";
+  background-size: cover;
+  margin-top: -8px;
+  background-image: url("data:image/svg+xml,%3Csvg width='22' height='20' viewBox='0 0 22 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10.2827 1.45332C10.5131 0.986377 10.6284 0.752908 10.7848 0.678314C10.9209 0.613414 11.0791 0.613414 11.2152 0.678314C11.3717 0.752908 11.4869 0.986377 11.7174 1.45332L13.9041 5.88328C13.9721 6.02113 14.0061 6.09006 14.0558 6.14358C14.0999 6.19096 14.1527 6.22935 14.2113 6.25662C14.2776 6.28742 14.3536 6.29854 14.5057 6.32077L19.397 7.03571C19.9121 7.11099 20.1696 7.14863 20.2888 7.27444C20.3925 7.38389 20.4412 7.5343 20.4215 7.68377C20.3988 7.85558 20.2124 8.03718 19.8395 8.40038L16.3014 11.8464C16.1912 11.9538 16.136 12.0076 16.1004 12.0715C16.0689 12.128 16.0487 12.1902 16.0409 12.2545C16.0321 12.3271 16.0451 12.403 16.0711 12.5547L16.906 17.4221C16.994 17.9355 17.038 18.1922 16.9553 18.3445C16.8833 18.477 16.7554 18.57 16.6071 18.5975C16.4366 18.6291 16.2061 18.5078 15.7451 18.2654L11.3724 15.9658C11.2361 15.8942 11.168 15.8584 11.0962 15.8443C11.0327 15.8318 10.9673 15.8318 10.9038 15.8443C10.832 15.8584 10.7639 15.8942 10.6277 15.9658L6.25492 18.2654C5.79392 18.5078 5.56341 18.6291 5.39297 18.5975C5.24468 18.57 5.11672 18.477 5.04474 18.3445C4.962 18.1922 5.00603 17.9355 5.09407 17.4221L5.92889 12.5547C5.95491 12.403 5.96793 12.3271 5.95912 12.2545C5.95132 12.1902 5.93111 12.128 5.89961 12.0715C5.86402 12.0076 5.80888 11.9538 5.69859 11.8464L2.16056 8.40038C1.78766 8.03718 1.60121 7.85558 1.57853 7.68377C1.55879 7.5343 1.60755 7.38389 1.71125 7.27444C1.83044 7.14863 2.08797 7.11099 2.60304 7.03571L7.49431 6.32077C7.64642 6.29854 7.72248 6.28742 7.78872 6.25662C7.84736 6.22935 7.90016 6.19096 7.94419 6.14358C7.99391 6.09006 8.02793 6.02113 8.09597 5.88328L10.2827 1.45332Z' stroke='%23343434' stroke-width='1.2' stroke-linecap='round' stroke-linejoin='round' /%3E%3C/svg%3E");
+}
+.product-images .icon-heart:before {
+  width: 36px;
+  height: 33px;
+}
+
+.wishlist-button:hover .icon-heart:before {
+  background-image: url("data:image/svg+xml,%3Csvg width='22' height='20' viewBox='0 0 22 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10.2827 1.45332C10.5131 0.986377 10.6284 0.752908 10.7848 0.678314C10.9209 0.613414 11.0791 0.613414 11.2152 0.678314C11.3717 0.752908 11.4869 0.986377 11.7174 1.45332L13.9041 5.88328C13.9721 6.02113 14.0061 6.09006 14.0558 6.14358C14.0999 6.19096 14.1527 6.22935 14.2113 6.25662C14.2776 6.28742 14.3536 6.29854 14.5057 6.32077L19.397 7.03571C19.9121 7.11099 20.1696 7.14863 20.2888 7.27444C20.3925 7.38389 20.4412 7.5343 20.4215 7.68377C20.3988 7.85558 20.2124 8.03718 19.8395 8.40038L16.3014 11.8464C16.1912 11.9538 16.136 12.0076 16.1004 12.0715C16.0689 12.128 16.0487 12.1902 16.0409 12.2545C16.0321 12.3271 16.0451 12.403 16.0711 12.5547L16.906 17.4221C16.994 17.9355 17.038 18.1922 16.9553 18.3445C16.8833 18.477 16.7554 18.57 16.6071 18.5975C16.4366 18.6291 16.2061 18.5078 15.7451 18.2654L11.3724 15.9658C11.2361 15.8942 11.168 15.8584 11.0962 15.8443C11.0327 15.8318 10.9673 15.8318 10.9038 15.8443C10.832 15.8584 10.7639 15.8942 10.6277 15.9658L6.25492 18.2654C5.79392 18.5078 5.56341 18.6291 5.39297 18.5975C5.24468 18.57 5.11672 18.477 5.04474 18.3445C4.962 18.1922 5.00603 17.9355 5.09407 17.4221L5.92889 12.5547C5.95491 12.403 5.96793 12.3271 5.95912 12.2545C5.95132 12.1902 5.93111 12.128 5.89961 12.0715C5.86402 12.0076 5.80888 11.9538 5.69859 11.8464L2.16056 8.40038C1.78766 8.03718 1.60121 7.85558 1.57853 7.68377C1.55879 7.5343 1.60755 7.38389 1.71125 7.27444C1.83044 7.14863 2.08797 7.11099 2.60304 7.03571L7.49431 6.32077C7.64642 6.29854 7.72248 6.28742 7.78872 6.25662C7.84736 6.22935 7.90016 6.19096 7.94419 6.14358C7.99391 6.09006 8.02793 6.02113 8.09597 5.88328L10.2827 1.45332Z' stroke='%23C71349' stroke-width='1.2' stroke-linecap='round' stroke-linejoin='round' /%3E%3C/svg%3E");
+}
+
+.wishlist-added .icon-heart:before {
+  background-image: url("data:image/svg+xml,%3Csvg width='22' height='20' viewBox='0 0 22 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10.2827 1.45332C10.5131 0.986377 10.6284 0.752908 10.7848 0.678314C10.9209 0.613414 11.0791 0.613414 11.2152 0.678314C11.3717 0.752908 11.4869 0.986377 11.7174 1.45332L13.9041 5.88328C13.9721 6.02113 14.0061 6.09006 14.0558 6.14358C14.0999 6.19096 14.1527 6.22935 14.2113 6.25662C14.2776 6.28742 14.3536 6.29854 14.5057 6.32077L19.397 7.03571C19.9121 7.11099 20.1696 7.14863 20.2888 7.27444C20.3925 7.38389 20.4412 7.5343 20.4215 7.68377C20.3988 7.85558 20.2124 8.03718 19.8395 8.40038L16.3014 11.8464C16.1912 11.9538 16.136 12.0076 16.1004 12.0715C16.0689 12.128 16.0487 12.1902 16.0409 12.2545C16.0321 12.3271 16.0451 12.403 16.0711 12.5547L16.906 17.4221C16.994 17.9355 17.038 18.1922 16.9553 18.3445C16.8833 18.477 16.7554 18.57 16.6071 18.5975C16.4366 18.6291 16.2061 18.5078 15.7451 18.2654L11.3724 15.9658C11.2361 15.8942 11.168 15.8584 11.0962 15.8443C11.0327 15.8318 10.9673 15.8318 10.9038 15.8443C10.832 15.8584 10.7639 15.8942 10.6277 15.9658L6.25492 18.2654C5.79392 18.5078 5.56341 18.6291 5.39297 18.5975C5.24468 18.57 5.11672 18.477 5.04474 18.3445C4.962 18.1922 5.00603 17.9355 5.09407 17.4221L5.92889 12.5547C5.95491 12.403 5.96793 12.3271 5.95912 12.2545C5.95132 12.1902 5.93111 12.128 5.89961 12.0715C5.86402 12.0076 5.80888 11.9538 5.69859 11.8464L2.16056 8.40038C1.78766 8.03718 1.60121 7.85558 1.57853 7.68377C1.55879 7.5343 1.60755 7.38389 1.71125 7.27444C1.83044 7.14863 2.08797 7.11099 2.60304 7.03571L7.49431 6.32077C7.64642 6.29854 7.72248 6.28742 7.78872 6.25662C7.84736 6.22935 7.90016 6.19096 7.94419 6.14358C7.99391 6.09006 8.02793 6.02113 8.09597 5.88328L10.2827 1.45332Z' stroke='%23C71349' stroke-width='1.2' fill='%23C71349' stroke-linecap='round' stroke-linejoin='round' /%3E%3C/svg%3E");
+}
+
 #wpforms-6077 .wpforms-field-label {
   margin: 0;
 }
@@ -2765,21 +2845,6 @@ div.wpforms-container-full input[type=submit]:focus:after, div.wpforms-container
   line-clamp: 3;
   -webkit-box-orient: vertical;
 }
-.product-default .icon-heart:before {
-  width: 22px;
-  height: 20px;
-  position: relative;
-  display: block;
-  content: "";
-  margin-top: -8px;
-  background-image: url("data:image/svg+xml,%3Csvg width='22' height='20' viewBox='0 0 22 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10.2827 1.45332C10.5131 0.986377 10.6284 0.752908 10.7848 0.678314C10.9209 0.613414 11.0791 0.613414 11.2152 0.678314C11.3717 0.752908 11.4869 0.986377 11.7174 1.45332L13.9041 5.88328C13.9721 6.02113 14.0061 6.09006 14.0558 6.14358C14.0999 6.19096 14.1527 6.22935 14.2113 6.25662C14.2776 6.28742 14.3536 6.29854 14.5057 6.32077L19.397 7.03571C19.9121 7.11099 20.1696 7.14863 20.2888 7.27444C20.3925 7.38389 20.4412 7.5343 20.4215 7.68377C20.3988 7.85558 20.2124 8.03718 19.8395 8.40038L16.3014 11.8464C16.1912 11.9538 16.136 12.0076 16.1004 12.0715C16.0689 12.128 16.0487 12.1902 16.0409 12.2545C16.0321 12.3271 16.0451 12.403 16.0711 12.5547L16.906 17.4221C16.994 17.9355 17.038 18.1922 16.9553 18.3445C16.8833 18.477 16.7554 18.57 16.6071 18.5975C16.4366 18.6291 16.2061 18.5078 15.7451 18.2654L11.3724 15.9658C11.2361 15.8942 11.168 15.8584 11.0962 15.8443C11.0327 15.8318 10.9673 15.8318 10.9038 15.8443C10.832 15.8584 10.7639 15.8942 10.6277 15.9658L6.25492 18.2654C5.79392 18.5078 5.56341 18.6291 5.39297 18.5975C5.24468 18.57 5.11672 18.477 5.04474 18.3445C4.962 18.1922 5.00603 17.9355 5.09407 17.4221L5.92889 12.5547C5.95491 12.403 5.96793 12.3271 5.95912 12.2545C5.95132 12.1902 5.93111 12.128 5.89961 12.0715C5.86402 12.0076 5.80888 11.9538 5.69859 11.8464L2.16056 8.40038C1.78766 8.03718 1.60121 7.85558 1.57853 7.68377C1.55879 7.5343 1.60755 7.38389 1.71125 7.27444C1.83044 7.14863 2.08797 7.11099 2.60304 7.03571L7.49431 6.32077C7.64642 6.29854 7.72248 6.28742 7.78872 6.25662C7.84736 6.22935 7.90016 6.19096 7.94419 6.14358C7.99391 6.09006 8.02793 6.02113 8.09597 5.88328L10.2827 1.45332Z' stroke='%23343434' stroke-width='1.2' stroke-linecap='round' stroke-linejoin='round' /%3E%3C/svg%3E");
-}
-.product-default .wishlist-button:hover .icon-heart:before {
-  background-image: url("data:image/svg+xml,%3Csvg width='22' height='20' viewBox='0 0 22 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10.2827 1.45332C10.5131 0.986377 10.6284 0.752908 10.7848 0.678314C10.9209 0.613414 11.0791 0.613414 11.2152 0.678314C11.3717 0.752908 11.4869 0.986377 11.7174 1.45332L13.9041 5.88328C13.9721 6.02113 14.0061 6.09006 14.0558 6.14358C14.0999 6.19096 14.1527 6.22935 14.2113 6.25662C14.2776 6.28742 14.3536 6.29854 14.5057 6.32077L19.397 7.03571C19.9121 7.11099 20.1696 7.14863 20.2888 7.27444C20.3925 7.38389 20.4412 7.5343 20.4215 7.68377C20.3988 7.85558 20.2124 8.03718 19.8395 8.40038L16.3014 11.8464C16.1912 11.9538 16.136 12.0076 16.1004 12.0715C16.0689 12.128 16.0487 12.1902 16.0409 12.2545C16.0321 12.3271 16.0451 12.403 16.0711 12.5547L16.906 17.4221C16.994 17.9355 17.038 18.1922 16.9553 18.3445C16.8833 18.477 16.7554 18.57 16.6071 18.5975C16.4366 18.6291 16.2061 18.5078 15.7451 18.2654L11.3724 15.9658C11.2361 15.8942 11.168 15.8584 11.0962 15.8443C11.0327 15.8318 10.9673 15.8318 10.9038 15.8443C10.832 15.8584 10.7639 15.8942 10.6277 15.9658L6.25492 18.2654C5.79392 18.5078 5.56341 18.6291 5.39297 18.5975C5.24468 18.57 5.11672 18.477 5.04474 18.3445C4.962 18.1922 5.00603 17.9355 5.09407 17.4221L5.92889 12.5547C5.95491 12.403 5.96793 12.3271 5.95912 12.2545C5.95132 12.1902 5.93111 12.128 5.89961 12.0715C5.86402 12.0076 5.80888 11.9538 5.69859 11.8464L2.16056 8.40038C1.78766 8.03718 1.60121 7.85558 1.57853 7.68377C1.55879 7.5343 1.60755 7.38389 1.71125 7.27444C1.83044 7.14863 2.08797 7.11099 2.60304 7.03571L7.49431 6.32077C7.64642 6.29854 7.72248 6.28742 7.78872 6.25662C7.84736 6.22935 7.90016 6.19096 7.94419 6.14358C7.99391 6.09006 8.02793 6.02113 8.09597 5.88328L10.2827 1.45332Z' stroke='%23C71349' stroke-width='1.2' stroke-linecap='round' stroke-linejoin='round' /%3E%3C/svg%3E");
-}
-.product-default .wishlist-added .icon-heart:before {
-  background-image: url("data:image/svg+xml,%3Csvg width='22' height='20' viewBox='0 0 22 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10.2827 1.45332C10.5131 0.986377 10.6284 0.752908 10.7848 0.678314C10.9209 0.613414 11.0791 0.613414 11.2152 0.678314C11.3717 0.752908 11.4869 0.986377 11.7174 1.45332L13.9041 5.88328C13.9721 6.02113 14.0061 6.09006 14.0558 6.14358C14.0999 6.19096 14.1527 6.22935 14.2113 6.25662C14.2776 6.28742 14.3536 6.29854 14.5057 6.32077L19.397 7.03571C19.9121 7.11099 20.1696 7.14863 20.2888 7.27444C20.3925 7.38389 20.4412 7.5343 20.4215 7.68377C20.3988 7.85558 20.2124 8.03718 19.8395 8.40038L16.3014 11.8464C16.1912 11.9538 16.136 12.0076 16.1004 12.0715C16.0689 12.128 16.0487 12.1902 16.0409 12.2545C16.0321 12.3271 16.0451 12.403 16.0711 12.5547L16.906 17.4221C16.994 17.9355 17.038 18.1922 16.9553 18.3445C16.8833 18.477 16.7554 18.57 16.6071 18.5975C16.4366 18.6291 16.2061 18.5078 15.7451 18.2654L11.3724 15.9658C11.2361 15.8942 11.168 15.8584 11.0962 15.8443C11.0327 15.8318 10.9673 15.8318 10.9038 15.8443C10.832 15.8584 10.7639 15.8942 10.6277 15.9658L6.25492 18.2654C5.79392 18.5078 5.56341 18.6291 5.39297 18.5975C5.24468 18.57 5.11672 18.477 5.04474 18.3445C4.962 18.1922 5.00603 17.9355 5.09407 17.4221L5.92889 12.5547C5.95491 12.403 5.96793 12.3271 5.95912 12.2545C5.95132 12.1902 5.93111 12.128 5.89961 12.0715C5.86402 12.0076 5.80888 11.9538 5.69859 11.8464L2.16056 8.40038C1.78766 8.03718 1.60121 7.85558 1.57853 7.68377C1.55879 7.5343 1.60755 7.38389 1.71125 7.27444C1.83044 7.14863 2.08797 7.11099 2.60304 7.03571L7.49431 6.32077C7.64642 6.29854 7.72248 6.28742 7.78872 6.25662C7.84736 6.22935 7.90016 6.19096 7.94419 6.14358C7.99391 6.09006 8.02793 6.02113 8.09597 5.88328L10.2827 1.45332Z' stroke='%23C71349' stroke-width='1.2' fill='%23C71349' stroke-linecap='round' stroke-linejoin='round' /%3E%3C/svg%3E");
-}
 .product-default .box-image {
   padding: 0 12px;
   margin: 0 12px;
@@ -2839,6 +2904,14 @@ div.wpforms-container-full input[type=submit]:focus:after, div.wpforms-container
   padding: 100px;
   background: linear-gradient(to right, rgba(255, 255, 255, 0) 50%, #CD1D48 50%);
 }
+@media screen and (max-width: 849px) {
+  .homepage-about-section {
+    padding: 20px;
+  }
+  .homepage-about-section #col-466227936 > .col-inner {
+    padding: 20px;
+  }
+}
 
 .home-hero-title h1 {
   font-family: var(--font-family);
@@ -2856,6 +2929,40 @@ div.wpforms-container-full input[type=submit]:focus:after, div.wpforms-container
   color: rgba(255, 255, 255, 0.7);
 }
 
+.sale-box {
+  background: #ff5c00;
+  min-height: 400px;
+  display: flex;
+  align-items: end;
+}
+@media screen and (max-width: 549px) {
+  .sale-box .box-text {
+    padding: 30px;
+  }
+}
+
+.sale-off, .sale-off p {
+  /* 40% Off */
+  font-family: "Outfit";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 163.777px;
+  line-height: 1em;
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+  color: #E14400;
+}
+@media screen and (max-width: 1200px) {
+  .sale-off, .sale-off p {
+    font-size: 83.777px;
+  }
+}
+@media screen and (max-width: 549px) {
+  .sale-off, .sale-off p {
+    font-size: 53.777px;
+  }
+}
+
 .about-section,
 .about-section .col {
   padding: 0 !important;
@@ -2863,7 +2970,7 @@ div.wpforms-container-full input[type=submit]:focus:after, div.wpforms-container
 
 .about-section h3 {
   font-variant-numeric: lining-nums proportional-nums;
-  font-family: var(--font-korto);
+  font-family: "Outfit";
   font-size: 48px;
   font-style: normal;
   font-weight: 600;
@@ -3187,13 +3294,16 @@ a.button.is-outline > i[class^=icon-] {
   border-radius: var(--Box-Spacing);
 }
 
+.woocommerce-account #main,
+.single-product .page-title,
 .category-page-title,
 .page #content,
 .single #content {
-  padding-top: 150px;
-  background: #F2F2F2;
+  padding-top: 130px;
 }
 @media (max-width: 849px) and (min-width: 549px) {
+  .woocommerce-account #main,
+  .single-product .page-title,
   .category-page-title,
   .page #content,
   .single #content {
@@ -3201,6 +3311,8 @@ a.button.is-outline > i[class^=icon-] {
   }
 }
 @media (max-width: 549px) {
+  .woocommerce-account #main,
+  .single-product .page-title,
   .category-page-title,
   .page #content,
   .single #content {
@@ -3342,7 +3454,7 @@ li.html.custom.html_topbar_left div.selectron23,
 .catalog-section h3 {
   color: #000;
   font-variant-numeric: lining-nums proportional-nums;
-  font-family: var(--font-korto);
+  font-family: "Outfit";
   font-size: 48px;
   font-style: normal;
   font-weight: 600;
@@ -3453,7 +3565,7 @@ ul.wc_payment_methods {
   }
   .slider-nav-reveal .flickity-prev-next-button.next {
     left: auto !important;
-    right: -8px !important;
+    right: -38px !important;
   }
   .col-inner h2 {
     font-weight: 700;
@@ -3538,8 +3650,8 @@ ul.wc_payment_methods {
     border-color: #fff;
   }
   span.amount {
-    color: rgba(18, 17, 39, 0.8);
-    font-family: "Archivo";
+    color: #000000;
+    font-family: "Outfit";
     font-style: normal;
     font-weight: 500;
     font-size: 22px;
@@ -3647,7 +3759,7 @@ ul.wc_payment_methods {
   }
   footer .ux-menu-link__link {
     color: rgba(255, 255, 255, 0.9);
-    font-family: var(--font-korto);
+    font-family: "Outfit";
     font-size: 18px;
     font-style: normal;
     font-weight: 500;
@@ -3663,7 +3775,7 @@ ul.wc_payment_methods {
   }
   footer .ux-menu-title {
     color: var(--color-white, #FFF);
-    font-family: var(--font-korto);
+    font-family: "Outfit";
     font-size: 22px;
     font-style: normal;
     font-weight: 600;
@@ -3681,7 +3793,7 @@ ul.wc_payment_methods {
   .form-footer p {
     color: var(--color-white, #FFF);
     font-variant-numeric: lining-nums proportional-nums;
-    font-family: var(--font-korto);
+    font-family: "Outfit";
     font-size: 16px;
     font-style: normal;
     font-weight: 500;

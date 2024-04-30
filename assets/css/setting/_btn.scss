@@ -10,7 +10,7 @@
 .btn.btn-logout {
   padding: 11px 34px;
   color: #fff;
-  font-family: 'Archivo';
+  font-family:  $font-outfit;;
   font-style: normal;
   background: var(--color-cherry);
   border-radius: 5px;
@@ -18,7 +18,7 @@
 
 .button span {
   font-weight: 400;
-  font-family: 'Poppins';
+  font-family:  $font-outfit;;
   font-style: normal;
   font-weight: 500;
   font-size: 14px;
@@ -176,7 +176,7 @@ body .white.button.is-outline:hover:after {
 
 .button.secondary span {
   color: #000;
-  font-family: var(--font-korto);
+  font-family:  $font-outfit;
   font-size: 16px;
   font-style: normal;
   font-weight: 600;
@@ -215,7 +215,7 @@ input#button-subscribe {
 
 .button.primary span {
   color: var(--color-cherry) !important;
-  font-family: Avenir Next;
+  font-family:  $font-outfit;
   font-size: 16px !important;
   font-style: normal !important;
   font-weight: 700 !important;

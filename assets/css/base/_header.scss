@@ -35,15 +35,20 @@ body .header-full-width .container {
   max-width: 1570px!important;
 }
 
-
+.nav-dropdown-has-arrow li.has-dropdown:after, .nav-dropdown-has-arrow li.has-dropdown:before{
+  display: none!important;
+}
 #header{
 
 
   background:#fff;
 
-  .header-main .nav-left {
+  .header-main {
+    height: 72px;
+    .nav-left {
     justify-content: space-evenly;
     flex-flow: nowrap;
+  }
   }
 
   .header-bottom {
@@ -197,7 +202,27 @@ body .header-full-width .container {
     align-items: center;
   }
 }
+.header-wrapper .header-bottom-nav.nav > li > a,
+.header-wrapper .header-nav-main.nav > li > a{
+  position: relative;
 
+  &:after{
+    content: '';
+    width: 100%;
+    height: 2px;
+    opacity: 0;
+    display: block!important;
+    background: $sale;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+  }
+  &:hover{
+    &:after{
+      opacity: 1;
+    }
+  }
+}
 
 .header:not(.transparent)  .header-wrapper.stuck .header-nav-main.nav > li > a,
 .header:not(.transparent)  .header-wrapper.stuck .selectron23-option-title,
@@ -209,6 +234,7 @@ body .header-full-width .container {
   line-height: 100%;
   text-transform: uppercase;
   color: #000 !important;
+
 }
 
 .selectron23 {
@@ -289,7 +315,11 @@ body .header-full-width .container {
     font-weight: 400;
     font-size: 18px;
     line-height: 133%;
-    color: rgba(0, 0, 0, 0.25);
+    color: rgba(0, 0, 0, 0.75);
+
+    &::placeholder {
+      color: rgba(0, 0, 0, 0.25);
+    }
     z-index: 50;
     position: relative;
     @media screen and (max-width: $laptop) and (min-width: $table) {
@@ -867,5 +897,8 @@ header {
   }
 
 
+}
+.nav>li>a{
+  padding: 20px 0;
 }
 

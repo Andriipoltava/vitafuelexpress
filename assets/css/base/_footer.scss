@@ -32,7 +32,7 @@ footer .menu-colum:nth-child(3) {
 
 footer .ux-menu-title {
   color: var(--color-white, #FFF);
-  font-family: var(--font-korto);
+  font-family: $font-outfit;;
   font-size: 24px;
   font-style: normal;
   font-weight: 600;
@@ -44,7 +44,7 @@ footer .ux-menu-title {
 
 footer .ux-menu-link__link {
   color: rgba(255, 255, 255, 0.90);
-  font-family: var(--font-korto);
+  font-family: $font-outfit;;
   font-size: 18px;
   font-style: normal
 }
@@ -61,7 +61,7 @@ footer .wpforms-container .wpforms-field input {
   border-radius: 50px !important;
   background: rgba(255, 255, 255, 0.26) !important;
   color: rgba(255, 255, 255, 0.88) !important;
-  font-family: var(--font-korto) !important;
+  font-family:  $font-outfit !important;
   font-size: 16px !important;
   font-style: normal !important;
   font-weight: 400 !important;
@@ -89,7 +89,6 @@ footer .wpforms-submit {
 
 footer .wpforms-submit:before {
   content: '';
-  content: '';
   display: block;
   width: 24px;
   height: 24px;
@@ -102,7 +101,7 @@ footer .wpforms-submit:before {
 .form-footer p {
   color: var(--color-white, #FFF);
   font-variant-numeric: lining-nums proportional-nums;
-  font-family: var(--font-korto);
+  font-family: $font-outfit;;
   font-size: 24px;
   font-style: normal;
   font-weight: 500;
@@ -126,7 +125,7 @@ footer .wpforms-submit:before {
 
   text-align: right;
   font-variant-numeric: lining-nums proportional-nums;
-  font-family: var(--font-korto);
+  font-family: $font-outfit;;
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
@@ -140,7 +139,7 @@ footer .wpforms-submit:before {
   color: var(--color-white, #FFF);
 
   font-variant-numeric: lining-nums proportional-nums;
-  font-family: var(--font-korto);
+  font-family: $font-outfit;
   font-size: 14px;
   font-style: normal;
   font-weight: 400;

@@ -378,20 +378,3 @@ body.woocommerce-checkout .woocommerce-checkout .row.pt-0 {
   padding: 0;
 }
 
-
-.product-container .single_add_to_cart_button:after {
-  content: "";
-  width: 24px;
-  height: 24px;
-  display: inline-block;
-  background: url(/wp-content/uploads/2023/11/shopping-cart-01.svg);
-  background-repeat: no-repeat;
-  background-size: 100%;
-  background-position: center;
-  margin: 0 0 -6px 7px;
-  animation: initial !important;
-  position: relative !important;
-  top: initial !important;
-  left: initial !important;
-  border: initial;
-}
