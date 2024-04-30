@@ -234,6 +234,24 @@ input#button-subscribe {
   box-shadow: 1px 3px 7px 0 rgba(141, 4, 54, 0.06), 6px 15px 25px 0 rgba(141, 4, 54, 0.39), 17px 39px 80px 0 rgba(141, 4, 54, 0.16);
   background: white;
 }
+.wishlist_table .add_to_cart{
+
+  background-color: var(--color-cherry) !important;
+  font-family:  $font-outfit;
+  font-size: 16px !important;
+  font-style: normal !important;
+  font-weight: 700 !important;
+  line-height: normal !important;
+  text-transform: uppercase;
+  border-radius: 8px;
+  height: auto;
+  max-height: initial;
+  padding: 21px 36px;
+  border: initial;
+  color: #fff;
+
+
+}
 
 body {
   overflow-x: hidden;

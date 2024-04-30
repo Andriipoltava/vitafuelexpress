@@ -1229,6 +1229,22 @@ input#button-subscribe {
   background: white;
 }
 
+.wishlist_table .add_to_cart {
+  background-color: var(--color-cherry) !important;
+  font-family: "Outfit";
+  font-size: 16px !important;
+  font-style: normal !important;
+  font-weight: 700 !important;
+  line-height: normal !important;
+  text-transform: uppercase;
+  border-radius: 8px;
+  height: auto;
+  max-height: initial;
+  padding: 21px 36px;
+  border: initial;
+  color: #fff;
+}
+
 body {
   overflow-x: hidden;
 }
@@ -1808,6 +1824,7 @@ body.woocommerce-cart .cart-auto-refresh, body.woocommerce-checkout .woocommerce
   padding-right: 30px;
   display: inline-block;
   font-size: 12px;
+  font-weight: 500;
 }
 .off-canvas-cart .widget_shopping_cart .cart-popup-inner .woocommerce-mini-cart-item .cart-item-info {
   display: flex;
@@ -1820,12 +1837,15 @@ body.woocommerce-cart .cart-auto-refresh, body.woocommerce-checkout .woocommerce
 }
 .off-canvas-cart .widget_shopping_cart .cart-popup-inner .woocommerce-mini-cart-item .cart-item-info .cart-item-price .woocs_price_code del .woocommerce-Price-amount {
   color: rgba(0, 0, 0, 0.3019607843);
+  font-weight: 400;
 }
 .off-canvas-cart .widget_shopping_cart .cart-popup-inner .woocommerce-mini-cart-item .cart-item-info .cart-item-price .woocommerce-Price-amount {
   font-size: 14px;
+  font-weight: 600;
 }
 .off-canvas-cart .widget_shopping_cart .cart-popup-inner .woocommerce-mini-cart-item .cart-item-info .cart-item-quantity {
   font-size: 12px;
+  font-weight: 400;
 }
 .off-canvas-cart .widget_shopping_cart .cart-popup-inner .woocommerce-mini-cart-item .cart-item-info .cart-item-quantity .cart-item-quantity-label {
   color: #9B9B9B;
@@ -2200,6 +2220,11 @@ body.woocommerce-checkout .woocommerce-checkout .row.pt-0 {
   text-transform: uppercase;
   font-weight: 500;
   line-height: 116%;
+}
+
+.single-product .product-section-title.product-section-title-related {
+  font-weight: 600;
+  color: #343434;
 }
 
 .single-product .related.related-products-wrapper {

@@ -38,6 +38,7 @@ body.woocommerce-cart .cart-auto-refresh, body.woocommerce-checkout .woocommerce
           padding-right: 30px;
           display: inline-block;
           font-size: 12px;
+          font-weight: 500;
         }
 
         .cart-item-info {
@@ -53,17 +54,20 @@ body.woocommerce-cart .cart-auto-refresh, body.woocommerce-checkout .woocommerce
               del {
                 .woocommerce-Price-amount {
                   color: #0000004D;
+                  font-weight: 400;
                 }
               }
             }
 
             .woocommerce-Price-amount {
               font-size: 14px;
+              font-weight: 600;
             }
           }
 
           .cart-item-quantity {
             font-size: 12px;
+            font-weight: 400;
 
             .cart-item-quantity-label {
               color: #9B9B9B;
